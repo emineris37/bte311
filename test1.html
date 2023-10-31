@@ -1,44 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>HTML Testi</title>
+    <meta charset="UTF-8">
+    <title>Web Programcılığı Testi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007BFF;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-
-    <h2>Web Programcılığı Testi</h2>
-
-    <form action="test-sonucu.html" method="post">
-
-        <h3>Soru 1: HTML koyu yazı tonu hangi tagle yapılır?</h3>
-        <input type="radio" name="soru1" value="a"> a) &lt;B&gt;&lt;/B&gt;<br>
-        <input type="radio" name="soru1" value="b"> b) &lt;I&gt;&lt;/I&gt;<br>
-        <input type="radio" name="soru1" value="c"> c) &lt;U&gt;&lt;/U&gt;<br>
-
-        <h3>Soru 2: HTML'de üzeri çizili yazı hangi tagle yapılır?</h3>
-        <input type="radio" name="soru2" value="a"> a) &lt;B&gt;&lt;/B&gt;<br>
-        <input type="radio" name="soru2" value="b"> b) &lt;S&gt;&lt;/S&gt;<br>
-        <input type="radio" name="soru2" value="c"> c) &lt;P&gt;&lt;/P&gt;<br>
-
-        <h3>Soru 3: HTML form etiketi nedir?</h3>
-        <input type="radio" name="soru3" value="a"> a) &lt;form&gt;<br>
-        <input type="radio" name="soru3" value="b"> b) &lt;input&gt;<br>
-        <input type="radio" name="soru3" value="c"> c) &lt;html&gt;<br>
-
-        <h3>Soru 4: HTML'de resim eklemek için hangi etiket kullanılır?</h3>
-        <input type="radio" name="soru4" value="a"> a) &lt;img&gt;<br>
-        <input type="radio" name="soru4" value="b"> b) &lt;image&gt;<br>
-        <input type="radio" name="soru4" value="c"> c) &lt;picture&gt;<br>
-
-        <h3>Soru 5: HTML'de bağlantı eklemek için hangi etiket kullanılır?</h3>
-        <input type="radio" name="soru5" value="a"> a) &lt;hyperlink&gt;<br>
-        <input type="radio" name="soru5" value="b"> b) &lt;a&gt;<br>
-        <input type="radio" name="soru5" value="c"> c) &lt;link&gt;<br>
-
-        <br>
-
-        <input type="submit" value="Testi Gönder">
-
-    </form>
-
+    <div class="container">
+        <h1>Web Programcılığı Testi</h1>
+        <form action="test_sonuc.php" method="POST">
+            <div class="question">
+                <p>Soru 1: Web programlamada HTML ne anlama gelir?</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soru1" value="a"> a) Hyper Text Markup Language
+                    </label>
+                    <label>
+                        <input type="radio" name="soru1" value="b"> b) High Tech Modern Language
+                    </label>
+                    <label>
+                        <input type="radio" name="soru1" value="c"> c) Hyperlink and Text Markup Language
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>Soru 2: Hangi dil web tarayıcılarında çalışan bir programlama dili değildir?</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soru2" value="a"> a) JavaScript
+                    </label>
+                    <label>
+                        <input type="radio" name="soru2" value="b"> b) Python
+                    </label>
+                    <label>
+                        <input type="radio" name="soru2" value="c"> c) HTML
+                    </label>
+                </div>
+            </div>
+            <div class="question">
+                <p>Soru 3: Hangisi bir veritabanı yönetim sistemi (DBMS) değildir?</p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="soru3" value="a"> a) MySQL
+                    </label>
+                    <label>
+                        <input type="radio" name="soru3" value="b"> b) Windows
+                    </label>
+                    <label>
+                        <input type="radio" name="soru3" value="c"> c) PostgreSQL
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Testi Gönder</button>
+        </form>
+    </div>
 </body>
 </html>
