@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Programcılığı Sınavı</title>
+</head>
+<body>
+    <h1>Web Programcılığı Sınavı</h1>
+    <form action="sonuc.php" method="post">
+        <ol>
+            <li>
+                <label for="soru1">HTML'nin açılımı nedir?</label>
+                <input type="text" id="soru1" name="soru1" required>
+            </li>
+            <li>
+                <label>Hangi HTML versiyonunu kullanmalısınız?</label><br>
+                <input type="radio" id="soru2a" name="soru2" value="HTML4">
+                <label for="soru2a">HTML4</label><br>
+                <input type="radio" id="soru2b" name="soru2" value="HTML5">
+                <label for="soru2b">HTML5</label><br>
+                <input type="radio" id="soru2c" name="soru2" value="XHTML">
+                <label for="soru2c">XHTML</label><br>
+            </li>
+            <li>
+                <label>Kullanılan diller:</label><br>
+                <input type="checkbox" id="soru3a" name="soru3[]" value="HTML">
+                <label for="soru3a">HTML</label><br>
+                <input type="checkbox" id="soru3b" name="soru3[]" value="CSS">
+                <label for="soru3b">CSS</label><br>
+                <input type="checkbox" id="soru3c" name="soru3[]" value="JavaScript">
+                <label for="soru3c">JavaScript</label><br>
+            </li>
+            <li>
+                <label for="soru4">"Merhaba Dünya" yazan bir HTML belgesi nasıl oluşturulur?</label>
+                <textarea id="soru4" name="soru4" required></textarea>
+            </li>
+            <li>
+                <label for="soru5">Aşağıdaki HTML kodunun çıktısı ne olur?</label>
+                <code>&lt;h1&gt;Başlık&lt;/h1&gt;</code><br>
+                <input type="text" id="soru5" name="soru5" required>
+            </li>
+        </ol>
+        <input type="submit" value="Sınavı Bitir">
+    </form>
+</body>
+</html>
