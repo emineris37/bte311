@@ -2,40 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Venn Şeması</title>
     <style>
-daire,
-dairee,
-daireee{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    position: absolute;
-}
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-daire{
-    background-color: rgba(255, 0, 0, 0.5);
-    margin-left: 500px;
-}
+        .venn-container {
+            position: relative;
+        }
 
-dairee{
-    background-color: rgba(0, 0, 255, 0.5);
-    margin-left: 650px;
-    margin-bottom: 500px;
-}
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: #3498db; /* Renkleri isteğinize göre değiştirebilirsiniz */
+            width: 150px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
 
-daireee{
-    background-color: rgba(255, 255, 0, 0.5);
-    margin-left: 570px;
-    margin-top: 130px;
-}
-
-</style>
+        .circle1 { top: 0; left: 50%; transform: translateX(-50%); }
+        .circle2 { bottom: 0; left: 25%; transform: translateX(-50%); }
+        .circle3 { bottom: 0; right: 25%; transform: translateX(50%); }
+    </style>
+    <title>Venn Diagram</title>
 </head>
 <body>
-    <div class="daire"></div>
-    <div class="dairee"></div>
-    <div class="daireee"></div>
+
+<div class="venn-container">
+    <div class="circle circle1">A</div>
+    <div class="circle circle2">B</div>
+    <div class="circle circle3">C</div>
+</div>
+
 </body>
 </html>
