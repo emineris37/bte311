@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Animasyonlu Div Örnekleri</title>
+    <style>
+        /* Yukarı aşağı gidip gelen */
+        #div1 {
+            animation: upDown 2s linear infinite;
+        }
+
+        /* Büyüyüp Küçülen ve rengi değişen */
+        #div2 {
+            animation: growShrink 2s alternate infinite;
+        }
+
+        /* Git gide transparan değeri artan ve azalan */
+        #div3 {
+            animation: fadeInOut 2s alternate infinite;
+        }
+
+        /* Sağa sola giden */
+        #div4 {
+            animation: moveRightLeft 2s linear infinite;
+        }
+
+        /* Dönen */
+        #div5 {
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes upDown {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(50px);
+            }
+        }
+
+        @keyframes growShrink {
+            0%, 100% {
+                transform: scale(1);
+                background-color: red;
+            }
+            50% {
+                transform: scale(1.5);
+                background-color: blue;
+            }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes moveRightLeft {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(50px);
+            }
+        }
+
+        @keyframes rotate {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Yukarı aşağı gidip gelen -->
+    <div id="div1">Yukarı Aşağı</div>
+    
+    <!-- Büyüyüp Küçülen ve rengi değişen -->
+    <div id="div2">Büyüyüp Küçül</div>
+    
+    <!-- Git gide transparan değeri artan ve azalan -->
+    <div id="div3">Transparan</div>
+    
+    <!-- Sağa sola giden -->
+    <div id="div4">Sağa Sola</div>
+    
+    <!-- Dönen -->
+    <div id="div5">Dön</div>
+</body>
+</html>
