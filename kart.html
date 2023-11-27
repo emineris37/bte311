@@ -5,44 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kartlar</title>
   <style>
-  
-    .kart-container {
+    /* Flexbox kullanarak kartları yan yana sırala */
+    .kart-grup-container {
       display: flex;
+      justify-content: space-around;
+      margin: 20px 0; /* Gruplar arasındaki boşluğu ayarla */
     }
 
-   
+    /* Kart gruplarına genel stil */
+    .kart-grup {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px; /* Kartlar arasındaki boşluğu ayarla */
+    }
+
+    /* Kartların genel stilini belirle */
     .kart {
       border: 1px solid #ddd;
       padding: 10px;
-      margin: 5px;
       text-align: center;
-      width: 100px;
+      width: 100px; /* Kart genişliği */
+      margin: 5px;
     }
   </style>
 </head>
 <body>
 
+<!-- Kart gruplarını içeren genel container -->
+<div class="kart-grup-container">
 
-<div class="kart-container">
- 
-  <div class="kart">Kart 1</div>
+  <!-- 1 tane kart -->
+  <div class="kart-grup">
+    <div class="kart">Kart 1</div>
+  </div>
   
-
-  <div class="kart">Kart 2</div>
-  <div class="kart">Kart 3</div>
+  <!-- 2 tane yan yana kart -->
+  <div class="kart-grup">
+    <div class="kart">Kart 2</div>
+    <div class="kart">Kart 3</div>
+  </div>
   
-
-  <div class="kart">Kart 4</div>
-  <div class="kart">Kart 5</div>
-  <div class="kart">Kart 6</div>
+  <!-- 3 tane yan yana kart -->
+  <div class="kart-grup">
+    <div class="kart">Kart 4</div>
+    <div class="kart">Kart 5</div>
+    <div class="kart">Kart 6</div>
+  </div>
   
+  <!-- 6 tane yan yana kart -->
+  <div class="kart-grup">
+    <div class="kart">Kart 7</div>
+    <div class="kart">Kart 8</div>
+    <div class="kart">Kart 9</div>
+    <div class="kart">Kart 10</div>
+    <div class="kart">Kart 11</div>
+    <div class="kart">Kart 12</div>
+  </div>
 
-  <div class="kart">Kart 7</div>
-  <div class="kart">Kart 8</div>
-  <div class="kart">Kart 9</div>
-  <div class="kart">Kart 10</div>
-  <div class="kart">Kart 11</div>
-  <div class="kart">Kart 12</div>
 </div>
 
 </body>
