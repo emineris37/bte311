@@ -13,29 +13,30 @@
       margin: 5px;
     }
 
-    /* 576px'den küçük ekranlar */
+    /* Ekran boyutlarına göre kart düzenlemeleri */
     @media (max-width: 575px) {
+      /* Xs: 1 tane yan yana kart */
       .kart {
         width: calc(100% - 10px);
       }
     }
 
-    /* 576px - 767px arası ekranlar */
     @media (min-width: 576px) and (max-width: 767px) {
+      /* Sm: 2 tane yan yana kart */
       .kart {
         width: calc(50% - 10px);
       }
     }
 
-    /* 768px - 991px arası ekranlar */
     @media (min-width: 768px) and (max-width: 991px) {
+      /* Md: 3 tane yan yana kart */
       .kart {
         width: calc(33.33% - 10px);
       }
     }
 
-    /* 992px ve üzeri ekranlar */
     @media (min-width: 992px) {
+      /* Lg: 6 tane yan yana kart */
       .kart {
         width: calc(16.66% - 10px);
       }
@@ -46,25 +47,13 @@
 
 <!-- Kartları içeren ana container -->
 <div class="kart-container">
-  <!-- 1 tane kart - 576px'den küçük -->
+  <!-- 6 kart oluştur -->
   <div class="kart">Kart 1</div>
-
-  <!-- 2 tane kart - 576px - 767px arası -->
   <div class="kart">Kart 2</div>
   <div class="kart">Kart 3</div>
-
-  <!-- 3 tane kart - 768px - 991px arası -->
   <div class="kart">Kart 4</div>
   <div class="kart">Kart 5</div>
   <div class="kart">Kart 6</div>
-
-  <!-- 6 tane kart - 992px ve üzeri -->
-  <div class="kart">Kart 7</div>
-  <div class="kart">Kart 8</div>
-  <div class="kart">Kart 9</div>
-  <div class="kart">Kart 10</div>
-  <div class="kart">Kart 11</div>
-  <div class="kart">Kart 12</div>
 </div>
 
 </body>
