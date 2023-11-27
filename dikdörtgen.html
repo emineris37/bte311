@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Çeşitli Dikdörtgenler</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .dikdortgen {
+            height: 100px;
+            background-color: #3498db;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .dikdortgen:nth-child(2n) {
+            background-color: #e74c3c;
+        }
+
+        .dikdortgen:nth-child(3n) {
+            background-color: #2ecc71;
+        }
+
+        .dikdortgen:nth-child(4n) {
+            background-color: #f39c12;
+        }
+
+        .dikdortgen:nth-child(5n) {
+            background-color: #9b59b6;
+        }
+
+        .dikdortgen:nth-child(6n) {
+            background-color: #27ae60;
+        }
+
+        .dikdortgen:nth-child(7n) {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <div class="dikdortgen">1</div>
+    <div class="dikdortgen">2</div>
+    <div class="dikdortgen">3</div>
+    <div class="dikdortgen">4</div>
+    <div class="dikdortgen">5</div>
+    <div class="dikdortgen">6</div>
+    <div class="dikdortgen">7</div>
+</body>
+</html>
