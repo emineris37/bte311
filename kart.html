@@ -5,15 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kartlar</title>
   <style>
-    /* Flexbox kullanarak kartları yan yana sırala */
-    .kart-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px; /* Kartlar arasındaki boşluğu ayarla */
-      justify-content: center; /* Kartları ortala */
-    }
-
-    /* Kartların genel stilini belirle */
+    /* Genel kart stilini belirle */
     .kart {
       border: 1px solid #ddd;
       padding: 10px;
@@ -21,31 +13,48 @@
       width: 100px; /* Kart genişliği */
       margin: 5px;
     }
+
+    /* Ekran boyutuna göre kart düzenlemeleri */
+    @media (max-width: 575px) {
+      /* 1 tane yan yana kart - Ekran küçükse */
+      .kart {
+        width: calc(100% - 10px);
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+      /* 2 tane yan yana kart - Ekran 576px ile 768px arasındaysa */
+      .kart {
+        width: calc(50% - 10px);
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+      /* 3 tane yan yana kart - Ekran 768px ile 992px arasındaysa */
+      .kart {
+        width: calc(33.33% - 10px);
+      }
+    }
+
+    @media (min-width: 992px) {
+      /* 6 tane yan yana kart - Ekran 992px'den büyükse */
+      .kart {
+        width: calc(16.66% - 10px);
+      }
+    }
   </style>
 </head>
 <body>
 
 <!-- Kartları içeren ana container -->
 <div class="kart-container">
-  <!-- 1 tane kart -->
+  <!-- 6 kart oluştur -->
   <div class="kart">Kart 1</div>
-  
-  <!-- 2 tane yan yana kart -->
   <div class="kart">Kart 2</div>
   <div class="kart">Kart 3</div>
-  
-  <!-- 3 tane yan yana kart -->
   <div class="kart">Kart 4</div>
   <div class="kart">Kart 5</div>
   <div class="kart">Kart 6</div>
-  
-  <!-- 6 tane yan yana kart -->
-  <div class="kart">Kart 7</div>
-  <div class="kart">Kart 8</div>
-  <div class="kart">Kart 9</div>
-  <div class="kart">Kart 10</div>
-  <div class="kart">Kart 11</div>
-  <div class="kart">Kart 12</div>
 </div>
 
 </body>
