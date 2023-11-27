@@ -1,20 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Three-Circle Venn Diagram</title>
-    <link rel="stylesheet" href="venn.css">
+    <title>Daire</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .daire {
+            height: 200px;
+            width: 200px;
+            opacity: 0.4;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .daire1 {
+            background-color: red;
+        }
+
+        .daire2 {
+            background-color: blue;
+            margin-top: -100px;
+            margin-left: 100px;
+        }
+
+        .daire3 {
+            background-color: yellow;
+            margin-top: -50px;
+            margin-left: 50px;
+        }
+
+        .line {
+            position: absolute;
+            height: 200px;
+            width: 2px;
+            background-color: black;
+            transform: translate(-50%, -50%);
+        }
+
+        .line1 {
+            top: 50%;
+            left: 50%;
+        }
+
+        .line2 {
+            top: 50%;
+            left: 75%;
+            transform: translate(-50%, -50%) rotate(60deg);
+        }
+
+        .line3 {
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%) rotate(-60deg);
+        }
+    </style>
 </head>
 <body>
-    <div class="venn-container">
-        <div class="circle" id="circleA">A</div>
-        <div class="circle" id="circleB">B</div>
-        <div class="circle" id="circleC">C</div>
-        <div class="intersection" id="intersectionAB">A ∩ B</div>
-        <div class="intersection" id="intersectionBC">B ∩ C</div>
-        <div class="intersection" id="intersectionCA">C ∩ A</div>
-        <div class="intersection" id="intersectionABC">A ∩ B ∩ C</div>
+    <div class="container">
+        <div class="daire daire1"></div>
+        <div class="daire daire2"></div>
+        <div class="daire daire3"></div>
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+        <div class="line line3"></div>
     </div>
 </body>
 </html>
