@@ -1,96 +1,127 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Animasyonlu Div Örnekleri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometrik Şekiller Animasyonları</title>
     <style>
-        /* Yukarı aşağı gidip gelen */
-        #div1 {
-            animation: upDown 2s linear infinite;
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        /* Büyüyüp Küçülen ve rengi değişen */
-        #div2 {
-            animation: growShrink 2s alternate infinite;
+        .shape-container {
+            position: relative;
         }
 
-        /* Git gide transparan değeri artan ve azalan */
-        #div3 {
-            animation: fadeInOut 2s alternate infinite;
+        .up-down {
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            position: absolute;
+            animation: upDownAnimation 2s infinite alternate;
         }
 
-        /* Sağa sola giden */
-        #div4 {
-            animation: moveRightLeft 2s linear infinite;
+        .grow-shrink {
+            width: 50px;
+            height: 50px;
+            background-color: #e74c3c;
+            position: absolute;
+            animation: growShrinkAnimation 2s infinite alternate;
         }
 
-        /* Dönen */
-        #div5 {
-            animation: rotate 2s linear infinite;
+        .change-color {
+            width: 50px;
+            height: 50px;
+            background-color: #2ecc71;
+            position: absolute;
+            animation: changeColorAnimation 2s infinite alternate;
         }
 
-        @keyframes upDown {
-            0%, 100% {
-                transform: translateY(0);
+        .transparency {
+            width: 50px;
+            height: 50px;
+            background-color: #f39c12;
+            position: absolute;
+            animation: transparencyAnimation 2s infinite alternate;
+        }
+
+        .left-right {
+            width: 50px;
+            height: 50px;
+            background-color: #9b59b6;
+            position: absolute;
+            animation: leftRightAnimation 2s infinite alternate;
+        }
+
+        @keyframes upDownAnimation {
+            0% {
+                top: 0;
             }
-            50% {
-                transform: translateY(50px);
+            100% {
+                top: 100px;
             }
         }
 
-        @keyframes growShrink {
-            0%, 100% {
+        @keyframes growShrinkAnimation {
+            0% {
                 transform: scale(1);
-                background-color: red;
             }
-            50% {
+            100% {
                 transform: scale(1.5);
-                background-color: blue;
             }
         }
 
-        @keyframes fadeInOut {
-            0%, 100% {
+        @keyframes changeColorAnimation {
+            0% {
+                background-color: #2ecc71;
+            }
+            100% {
+                background-color: #e74c3c;
+            }
+        }
+
+        @keyframes transparencyAnimation {
+            0% {
                 opacity: 1;
             }
-            50% {
-                opacity: 0.5;
+            100% {
+                opacity: 0.2;
             }
         }
 
-        @keyframes moveRightLeft {
-            0%, 100% {
-                transform: translateX(0);
+        @keyframes leftRightAnimation {
+            0% {
+                left: 0;
             }
-            50% {
-                transform: translateX(50px);
-            }
-        }
-
-        @keyframes rotate {
-            0%, 100% {
-                transform: rotate(0deg);
-            }
-            50% {
-                transform: rotate(180deg);
+            100% {
+                left: 100px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Yukarı aşağı gidip gelen -->
-    <div id="div1">Yukarı Aşağı</div>
-    
-    <!-- Büyüyüp Küçülen ve rengi değişen -->
-    <div id="div2">Büyüyüp Küçül</div>
-    
-    <!-- Git gide transparan değeri artan ve azalan -->
-    <div id="div3">Transparan</div>
-    
-    <!-- Sağa sola giden -->
-    <div id="div4">Sağa Sola</div>
-    
-    <!-- Dönen -->
-    <div id="div5">Dön</div>
+    <div class="shape-container">
+        <div class="up-down"></div>
+    </div>
+
+    <div class="shape-container">
+        <div class="grow-shrink"></div>
+    </div>
+
+    <div class="shape-container">
+        <div class="change-color"></div>
+    </div>
+
+    <div class="shape-container">
+        <div class="transparency"></div>
+    </div>
+
+    <div class="shape-container">
+        <div class="left-right"></div>
+    </div>
 </body>
 </html>
