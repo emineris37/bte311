@@ -10,34 +10,32 @@
       border: 1px solid #ddd;
       padding: 10px;
       text-align: center;
-      width: 100px; /* Kart genişliği */
       margin: 5px;
     }
 
-    /* Ekran boyutuna göre kart düzenlemeleri */
+    /* 576px'den küçük ekranlar */
     @media (max-width: 575px) {
-      /* 1 tane yan yana kart - Ekran küçükse */
       .kart {
         width: calc(100% - 10px);
       }
     }
 
+    /* 576px - 767px arası ekranlar */
     @media (min-width: 576px) and (max-width: 767px) {
-      /* 2 tane yan yana kart - Ekran 576px ile 768px arasındaysa */
       .kart {
         width: calc(50% - 10px);
       }
     }
 
+    /* 768px - 991px arası ekranlar */
     @media (min-width: 768px) and (max-width: 991px) {
-      /* 3 tane yan yana kart - Ekran 768px ile 992px arasındaysa */
       .kart {
         width: calc(33.33% - 10px);
       }
     }
 
+    /* 992px ve üzeri ekranlar */
     @media (min-width: 992px) {
-      /* 6 tane yan yana kart - Ekran 992px'den büyükse */
       .kart {
         width: calc(16.66% - 10px);
       }
